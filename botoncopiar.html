@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"> P1:soy el primer parrafo </p>
+    <p id="p2"> P2:soy el primer parrafo </p>
+    <button onclick="copiarAlPortapapeles('p1')">Copiar P1</button>
+    <button onclick="copiarAlPortapapeles('p2')">Copiar P2</button>
+    <br/><br/>
+    <input type="text" placeholder="Pega aqui para probar"/>
+
+    <script>
+   /* function  copiarAlPortapapeles(id_elemento){
+        var aux = document.createElement("input");
+        aux.setAttribute("value".documentgetElementByld(id_elemento).innerHTML);
+        document.body.appendChild(aux);
+        aux.select();
+        document.execCommand("Copy");
+        document.body.removeChild(aux);
+    }    */
+    function  copiarAlPortapapeles(p1){
+        var aux = document.createElement("");
+        aux.setAttribute("value".documentgetElementByld(p1).innerHTML);
+        document.body.appendChild(aux);
+        aux.select();
+        document.execCommand("Copy");
+        document.body.removeChild(aux);
+    }
+    </script>
+</body>
+</html>

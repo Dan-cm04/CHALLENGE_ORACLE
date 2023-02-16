@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    
+    <title>Encriptador</title>
+</head>
+<body>
+ <header>
+        <img class="logo" src="/IMAGENES/Logo.png" alt="logo de alura" >
+    </header>
+    <main>
+        <section>
+            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div>
+                <h6 class="información">Solo letras minusculas y sin acentos.</h6>
+            </div> 
+            <div class="botones">
+                <button class="btn-encriptar" onclick ="btnEncriptar()">Encriptar</button>
+                
+                <button class="btn-desencriptar" onclick ="btnDesencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        <section>
+            <textarea class="mensaje" cols="20" rows="10" ></textarea>
+            <div class="botones">
+                <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
+            </div>
+        </section>
+    <script>
+    /*var btn_copiar = document.querySelector("#btn_copiar");
+    btn_copiar.onclick = copiar;
+
+    function btnEncriptar(){
+    const textoEncriptado =encriptar(textArea.value)
+    mensaje.value = textoEncriptado
+    textArea.value ="";
+    mensaje.style.backgroundImage = "none"*/
+function btnCopiar(){
+    const textoCopiado = copiar(mensaje.value)
+    textArea.value = textoCopiado
+    mensaje.value ="";
+    mensaje.style.backgroundImage = "none"
+}
+    function  copiar(){
+    var textoCopiado = document.querySelector("#mensaje");
+    textoCopiado_select();
+    document.execCommand("copy");
+ }
+    </script>
+    </main>
+<script src="/script.js"></script>
+</body>
+</html>
